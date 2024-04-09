@@ -46,23 +46,28 @@ export default class Main extends Component {
       const {users, newUser} = this.state;
       this.setState({loading: true});
 
-      const response = await api.get(`/users/${newUser}`);
+      const response = await api.get(`?name=${newUser}`);
 
-      if (users.find(user => user.login === response.data.login)) {
-        alert('Usuário já adicionado!');
-        this.setState({
-          loading: false,
-          newUser: '',
-        });
-        return;
-      }
+      // if (users.find(user => user.login === response.data.login)) {
+      //   alert('Usuário já adicionado!');
+      //   this.setState({
+      //     loading: false,
+      //     newUser: '',
+      //   });
+      //   return;
+      // }
 
       const data = {
-        name: response.data.name,
-        login: response.data.login,
-        bio: response.data.bio,
-        avatar: response.data.avatar_url,
+        name: response.data.results[0].name,
+        status: response.data.results[0].status,
+        location: response.data.results[0].location.name,
+        fistEp: response.data.results[0].episode[0].replace('https://rickandmortyapi.com/api/episode/', ''),
+        avatar: response.data.results[0].image,
+        species: response.data.results[0].species,
+        genero: response.data.results[0].gender,
+        mundoOrigem: response.data.results[0].origin.name,
       };
+
 
       this.setState({
         users: [...users, data],
@@ -112,8 +117,11 @@ export default class Main extends Component {
           renderItem={({item}) => (
             <User>
               <Avatar source={{uri: item.avatar}} />
-              <Name>{item.name}</Name>
-              <Bio>{item.bio}</Bio>
+              <Name>Nome: {item.name}</Name>
+              <Name>status: {item.status === 'Alive' ? 'Vivo' : 'Morto'}</Name>
+              <Name>Ultima Localização: {item.location}</Name>
+              <Name>Primeiro Aparição: Episodio-{item.fistEp}</Name>
+
 
               <ProfileButton
                 onPress={() => {

@@ -27,7 +27,7 @@ export const Input = styled.TextInput.attrs({
 export const SubmitButton = styled(RectButton)`
   justify-content: center;
   align-items: center;
-  background: #3498db;
+  background: #00FF00;
   margin-left: 10px;
   padding: 0 12px;
   opacity: ${props => (props.loading ? 0.7 : 1)};
@@ -70,7 +70,7 @@ export const Bio = styled.Text.attrs({
 export const ProfileButton = styled(RectButton)`
   margin-top: 10px;
   align-self: stretch;
-  background: #3498db;
+  background:	#00FF00;
   justify-content: center;
   align-items: center;
   height: 36px;

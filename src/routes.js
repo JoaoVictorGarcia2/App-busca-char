@@ -20,7 +20,7 @@ export default function Routes() {
               title: 'LOGIN',
               headerTitleAlign: 'center',
               headerStyle: {
-                backgroundColor: '#3498db',
+                backgroundColor: '#00FF00',
               },
               headerTitleStyle: {
                 fontWeight: 'bold',
@@ -35,7 +35,7 @@ export default function Routes() {
               title: 'CADASTRO',
               headerTitleAlign: 'center',
               headerStyle: {
-                backgroundColor: '#3498db',
+                backgroundColor: '#00FF00',
               },
               headerTitleStyle: {
                 fontWeight: 'bold',
@@ -47,11 +47,11 @@ export default function Routes() {
           name="main"
           component={Main}
           options={{
-            title: 'GitHub VIEWER',
+            title: 'Rick-Morty View',
             headerTitleAlign: 'center',
             headerLeft: null,
             headerStyle: {
-              backgroundColor: '#3498db',
+              backgroundColor: '#00FF00',
             },
             headerTitleStyle: {
               fontWeight: 'bold',

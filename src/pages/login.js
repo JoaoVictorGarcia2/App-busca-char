@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import Gif from "./gif";
 
 const Login = () => {
     const [ email, setEmail ] = useState('');
@@ -21,7 +22,10 @@ const Login = () => {
     }
 
     return (
+     
         <View style={styles.container}>
+        
+        <Gif/>
             <TextInput
                 style={ styles.input }
                 placeholder="E-mail"
@@ -63,7 +67,7 @@ const styles = StyleSheet.create({
         width: '80%',
     },
     button: {
-        backgroundColor: "#3498db",
+        backgroundColor: "#00FF00",
         borderRadius: 5,
         padding: 10,
         width: '80%',
@@ -84,7 +88,7 @@ const styles = StyleSheet.create({
         fontSize: 18,
     },
     buttonTextCad: {
-        color: '#3498db',
+        color: '#00FF00',
         fontWeight: 'bold',
         fontSize: 18,
     }
