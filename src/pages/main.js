@@ -13,7 +13,6 @@ import {
   User,
   Avatar,
   Name,
-  Bio,
   ProfileButton,
   ProfileButtonText,
 } from './styles';
@@ -48,14 +47,6 @@ export default class Main extends Component {
 
       const response = await api.get(`?name=${newUser}`);
 
-      // if (users.find(user => user.login === response.data.login)) {
-      //   alert('Usuário já adicionado!');
-      //   this.setState({
-      //     loading: false,
-      //     newUser: '',
-      //   });
-      //   return;
-      // }
 
       const data = {
         name: response.data.results[0].name,
@@ -77,7 +68,7 @@ export default class Main extends Component {
 
       Keyboard.dismiss();
     } catch (error) {
-      alert('Usuário não encontrado!');
+      alert('Personagem não encontrado!');
       this.setState({
         loading: false,
         newUser: '',
@@ -95,7 +86,7 @@ export default class Main extends Component {
           <Input
             autoCorrect={false}
             autoCapitalize="none"
-            placeholder="Adicionar usuário"
+            placeholder="Buscar personagem"
             value={newUser}
             onChangeText={text => this.setState({newUser: text})}
             returnKeyType="send"
@@ -103,9 +94,9 @@ export default class Main extends Component {
           />
           <SubmitButton loading={loading} onPress={this.handleAddUser}>
             {loading ? (
-              <ActivityIndicator color="#fff" />
+              <ActivityIndicator color="black" />
             ) : (
-              <Icon name="add" size={20} color="#fff" />
+              <Icon name="add" size={20} color="black" />
             )}
           </SubmitButton>
         </Form>
@@ -115,7 +106,7 @@ export default class Main extends Component {
           data={users}
           keyExtractor={user => user.login}
           renderItem={({item}) => (
-            <User>
+            <User style = {{backgroundColor: 'white'}}>
               <Avatar source={{uri: item.avatar}} />
               <Name>Nome: {item.name}</Name>
               <Name>status: {item.status === 'Alive' ? 'Vivo' : 'Morto'}</Name>
@@ -127,7 +118,7 @@ export default class Main extends Component {
                 onPress={() => {
                   this.props.navigation.navigate('user', {user: item});
                 }}>
-                <ProfileButtonText>Ver perfil</ProfileButtonText>
+                <ProfileButtonText style={{color: '#000'}}>Ver Informações do personagem</ProfileButtonText>
               </ProfileButton>
               <ProfileButton
                 onPress={() => {

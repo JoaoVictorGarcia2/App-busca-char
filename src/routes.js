@@ -24,7 +24,7 @@ export default function Routes() {
               },
               headerTitleStyle: {
                 fontWeight: 'bold',
-                color: '#fff',
+                color: 'black',
               },
             }}
           />
@@ -39,7 +39,7 @@ export default function Routes() {
               },
               headerTitleStyle: {
                 fontWeight: 'bold',
-                color: '#fff',
+                color: 'black',
               },
             }}
           />
@@ -55,7 +55,7 @@ export default function Routes() {
             },
             headerTitleStyle: {
               fontWeight: 'bold',
-              color: '#fff',
+              color: 'black',
             },
           }}
         />
@@ -67,11 +67,11 @@ export default function Routes() {
             headerTitleAlign: 'center',
             headerTintColor: '#fff',
             headerStyle: {
-              backgroundColor: '#3498db',
+              backgroundColor: '#00FF00',
             },
             headerTitleStyle: {
               fontWeight: 'bold',
-              color: '#fff',
+              color: 'black',
             },
           }}
         />

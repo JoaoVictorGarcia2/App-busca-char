@@ -83,12 +83,12 @@ const styles = StyleSheet.create({
         marginBottom: 5,
     },
     buttonText: {
-        color: '#fff',
+        color: '#000',
         fontWeight: 'bold',
         fontSize: 18,
     },
     buttonTextCad: {
-        color: '#00FF00',
+        color: '#000',
         fontWeight: 'bold',
         fontSize: 18,
     }

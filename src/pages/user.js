@@ -3,15 +3,9 @@ import api from '../services/api';
 import {
   Container,
   Header,
-  Stars,
   Avatarperfil,
   Nameperfil,
   Bioperfil,
-  Starred,
-  OwnerAvatar,
-  Info,
-  Title,
-  Author,
 } from './styles';
 
 export default class User extends Component {
@@ -45,20 +39,6 @@ export default class User extends Component {
           <Bioperfil>Mundo de Origem: {user.mundoOrigem}</Bioperfil>
          
         </Header>
-
-        <Stars
-          data={stars}
-          keyExtractor={star => String(star.id)}
-          renderItem={({item}) => (
-            <Starred>
-              <OwnerAvatar source={{uri: item.owner.avatar_url}} />
-              <Info>
-                <Title>{item.name}</Title>
-                <Author>{item.owner.login}</Author>
-              </Info>
-            </Starred>
-          )}
-        />
       </Container>
     );
   }
