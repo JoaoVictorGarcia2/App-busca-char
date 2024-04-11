@@ -108,6 +108,7 @@ dependencies {
     // The version of react-native is set by the React Native Gradle Plugin
     implementation("com.facebook.react:react-android")
     implementation("com.facebook.react:flipper-integration")
+    
 
     if (hermesEnabled.toBoolean()) {
         implementation("com.facebook.react:hermes-android")
@@ -115,6 +116,12 @@ dependencies {
         implementation jscFlavor
     }
 }
+dependencies {
+  ...
+  compile 'com.facebook.fresco:fresco:1.+'
+  compile 'com.facebook.fresco:animated-gif:1.+'
+}
+
 
 project.ext.vectoricons = [
     iconFontNames: [ 'MaterialIcons.ttf', 'EvilIcons.ttf' ] // Specify font files

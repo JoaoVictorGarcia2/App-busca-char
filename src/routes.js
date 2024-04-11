@@ -63,7 +63,7 @@ export default function Routes() {
           name="user"
           component={User}
           options={{
-            title: 'Perfil do Usúario',
+            title: 'Perfil do Personagem',
             headerTitleAlign: 'center',
             headerTintColor: '#fff',
             headerStyle: {

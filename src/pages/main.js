@@ -94,9 +94,9 @@ export default class Main extends Component {
           />
           <SubmitButton loading={loading} onPress={this.handleAddUser}>
             {loading ? (
-              <ActivityIndicator color="black" />
+              <ActivityIndicator color="#565656" />
             ) : (
-              <Icon name="add" size={20} color="black" />
+              <Icon name="add" size={20} color="#565656" />
             )}
           </SubmitButton>
         </Form>
@@ -106,10 +106,10 @@ export default class Main extends Component {
           data={users}
           keyExtractor={user => user.login}
           renderItem={({item}) => (
-            <User style = {{backgroundColor: 'white'}}>
+            <User style = {{backgroundColor: '#e9e9e9'}}>
               <Avatar source={{uri: item.avatar}} />
               <Name>Nome: {item.name}</Name>
-              <Name>status: {item.status === 'Alive' ? 'Vivo' : 'Morto'}</Name>
+              <Name>Status: {item.status === 'Alive' ? 'Vivo' : 'Morto'}</Name>
               <Name>Ultima Localização: {item.location}</Name>
               <Name>Primeiro Aparição: Episodio-{item.fistEp}</Name>
 
@@ -118,7 +118,7 @@ export default class Main extends Component {
                 onPress={() => {
                   this.props.navigation.navigate('user', {user: item});
                 }}>
-                <ProfileButtonText style={{color: '#000'}}>Ver Informações do personagem</ProfileButtonText>
+                <ProfileButtonText style={{color: '#565656'}}>Ver Informações do personagem</ProfileButtonText>
               </ProfileButton>
               <ProfileButton
                 onPress={() => {
@@ -128,7 +128,7 @@ export default class Main extends Component {
                     ),
                   });
                 }}
-                style={{backgroundColor: '#F00'}}>
+                style={{backgroundColor: '#2f4538'}}>
                 <ProfileButtonText>Excluir</ProfileButtonText>
               </ProfileButton>
             </User>

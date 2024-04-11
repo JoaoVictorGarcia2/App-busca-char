@@ -30,13 +30,16 @@ export default class User extends Component {
       <Container>
         <Header>
           <Avatarperfil source={{uri: user.avatar}} />
-          <Nameperfil>Nome:{user.name}</Nameperfil>
-          <Bioperfil>status: {user.status === 'Alive' ? 'Vivo' : 'Morto'}</Bioperfil>
-          <Bioperfil>Ultima Localização: {user.location}</Bioperfil>
-          <Bioperfil>Primeira Aparição: Episodio - {user.fistEp}</Bioperfil>
-          <Bioperfil>Espécie: - {user.species}</Bioperfil>
+          <Nameperfil>{user.name}</Nameperfil>
+         
+          <Bioperfil>Espécie: {user.species}</Bioperfil>
           <Bioperfil>Gênero: {user.genero}</Bioperfil>
+          <Bioperfil>Status: {user.status === 'Alive' ? 'Vivo' : 'Morto'}</Bioperfil>
+          <Bioperfil></Bioperfil>
+          <Nameperfil>Outras Informações</Nameperfil>
+          <Bioperfil>Ultima Localização: {user.location}</Bioperfil>
           <Bioperfil>Mundo de Origem: {user.mundoOrigem}</Bioperfil>
+          <Bioperfil>Primeira Aparição: Episodio - {user.fistEp}</Bioperfil>
          
         </Header>
       </Container>

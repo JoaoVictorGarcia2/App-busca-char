@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-nativ
 import { useNavigation } from '@react-navigation/native';
 import Gif from "./gif";
 
+
 const Login = () => {
     const [ email, setEmail ] = useState('');
     const [ password, setPassword ] = useState('');
@@ -25,7 +26,7 @@ const Login = () => {
      
         <View style={styles.container}>
         
-        <Gif/>
+        <Gif style={styles.Gif}/>
             <TextInput
                 style={ styles.input }
                 placeholder="E-mail"
@@ -53,6 +54,12 @@ const Login = () => {
 
 const styles = StyleSheet.create({
     container: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: '#fff',
+    },
+    gifs: {
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',

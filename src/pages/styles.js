@@ -4,7 +4,24 @@ import {RectButton} from 'react-native-gesture-handler';
 export const Container = styled.View`
   flex: 1;
   padding: 30px;
-  background-color: black;
+  background-color: #101010;
+  
+`;
+export const Gif = styled.Image`
+
+  animation: spin 1s infinite linear;
+
+
+@keyframes spin {
+  from {
+    transform: scale(1) rotate(0deg);
+  }
+
+  to {
+    transform: scale(1) rotate(360deg);
+  }
+}
+  
 `;
 
 export const Form = styled.View`
@@ -19,10 +36,10 @@ export const Input = styled.TextInput.attrs({
 })`
   flex: 1;
   height: 40px;
-  background: #fff;
+  background: #d9d9d9;
   border-radius: 4px;
   padding: 0 15px;
-  border: 1px solid #eee;
+  border: 1px solid #e9e9e9;
 `;
 
 export const SubmitButton = styled(RectButton)`
@@ -81,13 +98,13 @@ export const ProfileButton = styled(RectButton)`
 export const ProfileButtonText = styled.Text`
   font-size: 14px;
   font-weight: bold;
-  color: #fff;
+  color: #d9d9d9;
   text-transform: uppercase;
 `;
 
 export const Header = styled.View`
   border-radius: 25px;
-  background-color: #eee;
+  background-color: #d9d9d9;
   margin-top: 65px;
   padding-top: 40px;
   padding-bottom: 40px;
